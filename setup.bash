@@ -1,4 +1,23 @@
 #!bin/bash
+#
+# Kaizen setup.bash
+#
+# Build and Configure 
+#
+
+# Install Packer
+git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+
+# Install fzr (need to test)
+#git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+#~/.fzf/install
+
+# Install Node
+#curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash - &&\
+#sudo apt-get install -y nodejs
+
+#sudo apt-get install -y elinks
+
 
 unlink ~/.config/nvim
 #rm -rf ~/.local/share/nvim
