@@ -3,21 +3,26 @@
 #
 # Kaizen setup.bash
 #
-# Build and Configure 
+# Setup Packer, Nvim, Bashrc
 #
 ################################################################################
+
+echo ""
+echo "Kaizen Setup!"
+echo ""
 
 # Install Packer
 #git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 if [ ! -d "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim" ]; then
     git clone --depth 1 https://github.com/wbthomason/packer.nvim "$HOME/.local/share/nvim/site/pack/packer/start/packer.nvim"
+else
+    echo "Packer Installed!"
 fi
 
-# Nvim setup 
+# Nvim setup
 unlink ~/.config/nvim
 #rm -rf ~/.local/share/nvim
 ln -s ~/workspace/kaizen/nvim-davro ~/.config/nvim
-ls -l ~/.config/nvim/
 
 ################################################################################
 #
@@ -53,5 +58,5 @@ else
     echo "Bind line already exists in ~/.bashrc"
 fi
 
-# Reload the ~/.bashrc to apply changes
+# Reload the ~/.bashrc to apply changes, only works for script not bash session
 source ~/.bashrc
